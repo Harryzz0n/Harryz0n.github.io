@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FXtires Comercial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <style>
+		body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+		main {
+            flex-grow: 1;
+        }
+        .intro {
+            display: flex; 
+            justify-content: space-between;
+        }
+        .formulario {
+            background-color: red;
+			color: white;
+        }
+        .box {
+            border: none; 
+            padding: 10px;
+            margin: 10px;
+        }
+        .info {
+            font-size: 1.5em;
+        }
+        ul {
+            list-style-type: none; 
+        }
+        footer {
+            width: 100%;
+            position: relative;
+            bottom: 1;
+		}
+    </style>
+</head>
+<body>
+        <table width="101%" cellpadding="10px" cellspacing="30px">
+        <header>
+        <div class="logo-container">
+            <img src="imgs/logo-transparencia.png" alt="Logo de FXtires Comercial" width="200" height="150">
+            <h2 class="titulo-grande"><em>FXtires Comercial</em></h2>
+        </div>
+    </header> 
+    <tr>
+        <td colspan="3">
+        <div>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a>
+                    <ul>
+                        <li><a href="lubricantes.html">Lubricantes</a></li>
+                        <li><a href="llantas.html">Llantas</a></li>
+                    </ul>
+                </li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="cotizacion.html" class="cotizacion">Cotización</a></li>
+            </ul>
+        </nav> </td> </tr>
+        <tr>
+            <td colspan="3">
+        <main id="main">
+            <br><br><section class="intro">
+                <div class="formulario box">
+                    <h2 class="info">Correo Directo</h2>
+                    <form action="mailto:fxtirescomercial@hotmail.com" method="post" enctype="text/plain">
+                        <label for="nombre">Tú Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" required><br>
+                        <label for="correo">Tú Correo electrónico:</label><br>
+                        <input type="email" id="correo" name="correo" required><br>
+                        <label for="telefono">Tú Teléfono:</label><br>
+                        <input type="tel" id="telefono" name="telefono" required><br>
+                        <label for="mensaje">Tú Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje"></textarea><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div> 
+                <div class="contacto box">
+                    <h2 class="info">Información de Contacto</h2>
+                    <p class="info">Puedes ponerte en contacto a través de nuestro formulario y te responderemos a la brevedad.</p>
+                    <ul class="info">
+                        <li><img src="imgs/icono_telefono.png" alt="Icono de teléfono" width="50px" height="50px"> +52 3320809840 </li>
+                        <li><img src="imgs/icono_carta.png" alt="Icono de carta" width="50px" height="50px"> fxtirescomercial@hotmail.com </li>
+                        <li><img src="imgs/icono_casa.png" alt="Icono de casa" width="50px" height="50px"> Santa Margarita 1261 col. Belisario Domínguez</li>
+                    </ul> 
+                </div>
+            </section> 
+        </main>
+				<footer>
+        <h1 id="titulo">FXtires Comercial: Tienda de Accesorios para camiones</h1>
+        <p id="subtitulo"> <br> FX TIRES es una empresa que comercializa llanta TBR y PCR aceites y lubricantes
+        </p>
+			</footer>
+    </div>
+</body>
+</html>
