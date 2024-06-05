@@ -3,21 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-.mycontainer {
+
+body {
+    background-color: #5a5959; /* Fondo gris para todas las páginas */
+    color: white; /* Texto blanco para contraste */
+    font-family: Arial, Helvetica, sans-serif; /* Tipografía común */
+}
+
+.logo-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-.logo {
-    margin-right: 20px;
-}
-#header {
-    font-family: Arial, Helvetica, sans-serif;
+    gap: 20px;
 }
 
 .nav {
-	position: relative;
-	z-index: 2;
     list-style: none;
+    position: relative;
+    z-index: 2;
 }
 
 .nav > li {
@@ -31,11 +34,15 @@
     text-decoration: none;
     padding: 10px 12px;
     display: block;
+    filter: brightness(1.1); /* Aclarar el color negro */
 }
 
-.nav li a:hover {
+.nav li a:hover,
+.cotizacion:hover {
     background-color: #434343;
+    filter: brightness(1.1); /* Aclarar el color negro al pasar el cursor */
 }
+
 .nav li ul {
     display: none;
     position: absolute;
@@ -54,115 +61,51 @@
     right: -140px;
     top: 0;
 }
-.image-container {
+
+.intro .image-container {
     position: relative;
-	z-index: 1;
+    z-index: 1;
 }
 
-.company-logo {
-	position: absolute;
-	top: 215px;
-	left: 629px;
-	z-index: 1;
-	width: 426px;
-	height: 396px;
-}
-.bg-image {
-	opacity: 0.6;
-  }
-#titulo{
-	text-align: right;
-	color: red;
-}
-#subtitulo {
-            text-align: center;
-            font-size: 1.5em; 
-        }
-.galeria {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-.cuadro {
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            margin: 10px;
-            padding: 10px;
-            width: calc(20% - 20px);
-            box-sizing: border-box;
-            text-align: center;
-        }
-.precio {
-            color: #D41717;
-        }
-.content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-.content img {
-            margin-left: 20px;
-        }
-.logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        
-.titulo-grande {
-            font-size: 3em; 
-            color: #CE1515;
-        }
-.cotizacion {
-            background-color: red !important;
-        }
-.cotizacion:hover {
-            background-color:#BB4D4D !important;
-        }
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: auto;
-}
-
-/* style.css */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gallery a {
-    margin: 10px;
-    position: relative;
-}
-
-.gallery img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-}
-
-.gallery a::before {
-    content: attr(data-caption);
+.intro .company-logo {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Asegurar que el logo esté sobre otros elementos */
+    width: 426px;
+    height: 396px;
+    filter: none; /* El logo no se ve afectado por el filtro */
+}
+
+.intro .bg-image {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.6; /* Restablecer la opacidad original */
+}
+
+footer {
+    background-color: #3c3737;
     color: #fff;
-    padding: 5px;
-    font-size: 12px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    text-align: center;
+    padding: 10px 0;
+    filter: brightness(1.1); /* Aclarar el color negro */
 }
 
-.gallery a:hover::before {
-    opacity: 1;
+#titulo {
+    text-align: right;
+    color: red;
 }
 
+#subtitulo {
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+.titulo-grande {
+    font-size: 3em; 
+    color: #CE1515;
+}
+
+.cotizacion {
+    background-color: red !important;
+}
