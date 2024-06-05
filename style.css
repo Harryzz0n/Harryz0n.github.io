@@ -143,8 +143,8 @@
 }
 
 .gallery img {
-    width: 490px;
-    height: 490px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
 }
 
